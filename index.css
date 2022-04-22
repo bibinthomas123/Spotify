@@ -6,6 +6,13 @@
     box-sizing: border-box;
 }
 
+.body::-webkit-scrollbar-thumb {
+    border: 5px solid transparent;
+    border-radius: 100px;
+    background-color: #8070d4;
+    background-clip: content-box;
+}
+
 body {
     background-color: antiquewhite;
     height: 100vh;
@@ -23,37 +30,66 @@ nav ul {
     background-color: black;
     color: white;
     align-items: center;
-    border-bottom: 3px solid rgb(32,255,2);
+    border-bottom: 3px solid rgb(32, 255, 2);
 }
-nav ul li{
+
+nav ul li {
     padding: 0 12px;
 }
+
 .brand>img {
     width: 55px;
     height: 50px;
     padding-right: 5px;
 }
 
-.brand{
+.brand {
     display: flex;
     align-items: center;
     font-weight: bolder;
     font-size: 1.4rem;
 }
-.container{
-    min-height: 78vh;
+
+.container {
+    min-height: 68vh;
+    background-color: black;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 12px;
+   background-image: url('https://cutewallpaper.org/21/black-music-wallpaper/1600x1200-px-background-black-guitars-red-High-Quality-.jpg') ;
+   background-size: cover;
+   background-repeat: no-repeat;
 }
-.bottom{
-    position: sticky;
+
+.bottom {
+    /* position: sticky; */
     height: 100px;
-    background-color: black; 
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    flex-direction: column;
+    position: relative;
+    bottom: -24px;
 
 }
-#progressBar{
+
+.icons {
+    margin: 10px 0;
+}
+
+.icons i {
+    cursor: pointer;
+    padding-right: 8px;
+}
+
+#progressBar {
     width: 77.8vw;
-    
-    
+
+
 }
