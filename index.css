@@ -46,10 +46,14 @@ nav ul li{
 .bottom{
     position: sticky;
     height: 100px;
-    background-color: black;
+    background-color: black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 #progressBar{
-    width: 77.8vw;;
+    width: 77.8vw;
+    
     
 }
