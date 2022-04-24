@@ -14,7 +14,8 @@
 }
 
 body {
-    background-color: antiquewhite;
+    background-image: url('https://i.gifer.com/Ocko.gif') ;
+    background-size: contain;
     height: 100vh;
     width: 100%;
 }
@@ -59,10 +60,11 @@ nav ul li {
     margin: 23px auto;
     width: 70%;
     border-radius: 12px;
-    padding: 12px;
-   background-image: url('https://cutewallpaper.org/21/black-music-wallpaper/1600x1200-px-background-black-guitars-red-High-Quality-.jpg') ;
-   background-size: cover;
-   background-repeat: no-repeat;
+    padding: 34px;
+    background-image: url('https://cutewallpaper.org/21/black-music-wallpaper/1600x1200-px-background-black-guitars-red-High-Quality-.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* position: absolute; */
 }
 
 .bottom {
@@ -76,6 +78,7 @@ nav ul li {
     flex-direction: column;
     position: relative;
     bottom: -24px;
+    border-top: 2px solid rgb(32, 255, 2);
 
 }
 
@@ -90,6 +93,39 @@ nav ul li {
 
 #progressBar {
     width: 77.8vw;
+}
 
+.songsItem {
+    height: 50px;
+    display: flex;
+    background-color: white;
+    width: 100%;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+    top: 67px;
+    position: relative;
+    left: -500px;
 
+}
+
+.songsItem img {
+    width: 43px;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+
+.timestamp {
+    margin: 0 23px;
+}
+
+.timestamp i {
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.songitemcontainer {
+    margin-top: -20px;
 }
