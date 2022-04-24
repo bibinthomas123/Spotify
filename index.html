@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>spotify</title>
     <link rel="stylesheet" href="index.css" />
-    <link type="image/png" sizes="32x32" rel="icon" href=".../icons8-spotify-for-artists-32.png">
+    <link type="image/png" sizes="32x32" rel="icon" href="icons8-spotify-for-artists-32.png">
     <script
     src="https://kit.fontawesome.com/0663546654.js"
       crossorigin="anonymous"
@@ -72,9 +72,12 @@
       <input type="range" name="range" id="progressBar" value="0" min="0" max="100" />
       <div class="icons">
         <!-- fontawesome icons -->
-        <i class="fas fa-2x fa-step-backward"></i>
+        <i class="fas fa-2x fa-step-backward" id="previous"></i>
         <i class="far fa-2x fa-play-circle" id="masterplay"></i>
-        <i class="fas fa-2x fa-step-forward"></i>
+        <i class="fas fa-2x fa-step-forward" id="next"></i>
+        <div class="songinfo">Now playing :
+           <span id="mastersongname" >Kadhaippoma</span>
+        </div>
       </div>
     </div>
     <script src="index.js"></script>

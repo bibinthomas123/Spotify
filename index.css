@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+     text-transform: capitalize;
 }
 
 .body::-webkit-scrollbar-thumb {
@@ -14,7 +16,7 @@
 }
 
 body {
-    background-image: url('https://i.gifer.com/Ocko.gif') ;
+    background-image: url('https://i.gifer.com/Ocko.gif');
     background-size: contain;
     height: 100vh;
     width: 100%;
@@ -61,7 +63,7 @@ nav ul li {
     width: 70%;
     border-radius: 12px;
     padding: 34px;
-    background-image: url('https://cutewallpaper.org/21/black-music-wallpaper/1600x1200-px-background-black-guitars-red-High-Quality-.jpg');
+    background-image: url('https://images.unsplash.com/photo-1501612780327-45045538702b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
     background-size: cover;
     background-repeat: no-repeat;
     /* position: absolute; */
@@ -107,9 +109,9 @@ nav ul li {
     justify-content: space-between;
     align-items: center;
     border-radius: 34px;
-    top: 67px;
+    top: 17%;
     position: relative;
-    left: -500px;
+    left: -125%;
 
 }
 
@@ -130,4 +132,12 @@ nav ul li {
 
 .songitemcontainer {
     margin-top: -20px;
+}
+
+.songinfo {
+    position: absolute;
+    left: 11vw;
+    top: 2.5rem;
+    font-family: 'Varela Round', sans-serif;
+
 }

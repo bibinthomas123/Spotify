@@ -4,48 +4,49 @@
 let songIndex = 0;
 let masterplayer = document.getElementById("masterplay");
 let myprogressbar = document.getElementById("progressBar");
-let audioElement = new Audio("letmeloveu.mp3");
-let songitem =Array.from(document.getElementsByClassName('songsItem'));
+let audioElement = new Audio("1.mp3");
+let mastersongname = document.getElementById("mastersongname");
+let songitem = Array.from(document.getElementsByClassName("songsItem"));
 //music is added here
 let songs = [
   {
     songname: "Kadhaippoma",
     filepath: "1.mp3",
-    coverpath: "location to cover page goes here ",
+    coverpath: "1.jpeg",
   },
   {
     songname: "Inayae",
     filepath: "2.mp3",
-    coverpath: "location to cover page goes here ",
+    coverpath: "2.jpeg",
   },
   {
     songname: "Let me love you",
     filepath: "3.mp3",
-    coverpath: "location to cover page goes here ",
+    coverpath: "3.jpeg",
   },
   {
     songname: "Okey oka lokam",
     filepath: "4.mp3",
-    coverpath: "location to cover page goes here ",
+    coverpath: "4.jpeg",
   },
   {
     songname: "Agar Tum Saath ",
     filepath: "5.mp3",
-    coverpath: "location to cover page goes here ",
+    coverpath: "5.jpeg",
   },
   {
     songname: "sometimes all i think about is you",
     filepath: "6.mp3",
-    coverpath: "location to cover page goes here ",
+    coverpath: "6.jpeg",
   },
 ];
 
-songitem.forEach((Element,i)=>{
-    // console.log(Element,i)
- Element.getElementsByTagName("img")[0].src= songs[i].coverpath;
- Element.getElementsByClassName("songname")[0].innerHTML=songs[i].songname;
-//  Element.getElementsByClassName("timestamp")[0].innerHTML=
-})
+songitem.forEach((Element, i) => {
+  // console.log(Element,i)
+  Element.getElementsByTagName("img")[0].src = songs[i].coverpath;
+  Element.getElementsByClassName("songname")[0].innerHTML = songs[i].songname;
+  //  Element.getElementsByClassName("timestamp")[0].innerHTML=
+});
 
 // handle play pause clicks
 masterplayer.addEventListener("click", () => {
@@ -62,10 +63,10 @@ masterplayer.addEventListener("click", () => {
 //listen to events
 
 audioElement.addEventListener("timeupdate", () => {
-  console.log("time update");
+  //   console.log("time update");
   //seek bar update
   progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
-  console.log(progress);
+  //   console.log(progress);
   myprogressbar.value = progress;
 });
 myprogressbar.addEventListener("change", () => {
@@ -73,25 +74,57 @@ myprogressbar.addEventListener("change", () => {
     (myprogressbar.value * audioElement.duration) / 100;
 });
 
-const makeAllplays=()=>{
-     Array.from(document.getElementsByClassName('songitemplay')).forEach((Element)=>{
-         Element.classList.remove('fa-pause-circle')
-         Element.classList.add('fa-play-circle')
-     })
-}
+const makeAllplays = () => {
+  Array.from(document.getElementsByClassName("songitemplay")).forEach(
+    (Element) => {
+      Element.classList.remove("fa-pause-circle");
+      Element.classList.add("fa-play-circle");
+    }
+  );
+};
 
-Array.from(document.getElementsByClassName("songitemplay")).forEach((Element)=>{
-      Element.addEventListener("click",(e)=>{
-           console.log(e.target);
-           makeAllplays();
-           index=parseInt(e.target.id)
-           e.target.classList.remove('fa-play-circle') 
-           e.target.classList.add('fa-pause-circle') 
-           audioElement.src=`${index}.mp3`
-           audioElement.currentTime=0;
-           audioElement.play();
-           masterplayer.classList.remove("fa-play-circle")
-           masterplayer.classList.add("fa-pause-circle")
+Array.from(document.getElementsByClassName("songitemplay")).forEach(
+  (Element) => {
+    Element.addEventListener("click", (e) => {
+      console.log(e.target);
+      makeAllplays();
+      songIndex = parseInt(e.target.id);
+      e.target.classList.remove("fa-play-circle");
+      e.target.classList.add("fa-pause-circle");
+      audioElement.src = `${songIndex}.mp3`;
+      audioElement.currentTime = 0;
+      audioElement.play();
+      masterplayer.classList.remove("fa-play-circle");
+      masterplayer.classList.add("fa-pause-circle");
+        mastersongname.innerHTML = songs[songIndex-1].songname;
+    });
+  }
+);
 
-      })
-})
+document.getElementById("next").addEventListener("click", () => {
+  if (songIndex > 5) {
+    songIndex = 1;
+  } else {
+    songIndex += 1;
+  }
+  audioElement.src = `${songIndex}.mp3`;
+  mastersongname.innerHTML = songs[songIndex].songname;
+  audioElement.currentTime = 0;
+  audioElement.play();
+  masterplayer.classList.remove("fa-play-circle");
+  masterplayer.classList.add("fa-pause-circle");
+});
+
+document.getElementById("previous").addEventListener("click", () => {
+  if (songIndex < 0) {
+    songIndex = 6;
+  } else {
+    songIndex -= 1;
+  }
+  audioElement.src = `${songIndex}.mp3`;
+  mastersongname.innerHTML = songs[songIndex].songname;
+  audioElement.currentTime = 0;
+  audioElement.play();
+  masterplayer.classList.remove("fa-play-circle");
+  masterplayer.classList.add("fa-pause-circle");
+});
