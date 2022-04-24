@@ -108,7 +108,7 @@ document.getElementById("next").addEventListener("click", () => {
     songIndex += 1;
   }
   audioElement.src = `${songIndex}.mp3`;
-  mastersongname.innerHTML = songs[songIndex].songname;
+  mastersongname.innerHTML = songs[songIndex-1].songname;
   audioElement.currentTime = 0;
   audioElement.play();
   masterplayer.classList.remove("fa-play-circle");
@@ -122,7 +122,7 @@ document.getElementById("previous").addEventListener("click", () => {
     songIndex -= 1;
   }
   audioElement.src = `${songIndex}.mp3`;
-  mastersongname.innerHTML = songs[songIndex].songname;
+  mastersongname.innerHTML = songs[songIndex-1].songname;
   audioElement.currentTime = 0;
   audioElement.play();
   masterplayer.classList.remove("fa-play-circle");
