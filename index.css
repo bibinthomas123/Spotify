@@ -71,7 +71,7 @@ nav ul li {
 
 .bottom {
     /* position: sticky; */
-    height: 100px;
+    height: 110px;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -140,4 +140,8 @@ nav ul li {
     top: 2.5rem;
     font-family: 'Varela Round', sans-serif;
 
+}
+.songitemplay{
+    position: relative;
+    right: 10px;
 }

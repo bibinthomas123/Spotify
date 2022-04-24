@@ -13,31 +13,37 @@ let songs = [
     songname: "Kadhaippoma",
     filepath: "1.mp3",
     coverpath: "1.jpeg",
+    duration:"4:49"
   },
   {
     songname: "Inayae",
     filepath: "2.mp3",
     coverpath: "2.jpeg",
+    duration:"3:52"
   },
   {
     songname: "Let me love you",
     filepath: "3.mp3",
     coverpath: "3.jpeg",
+    duration:"3:25"
   },
   {
     songname: "Okey oka lokam",
     filepath: "4.mp3",
     coverpath: "4.jpeg",
+    duration:"3:27"
   },
   {
     songname: "Agar Tum Saath ",
     filepath: "5.mp3",
     coverpath: "5.jpeg",
+    duration:"5:41"
   },
   {
     songname: "sometimes all i think about is you",
     filepath: "6.mp3",
     coverpath: "6.jpeg",
+    duration:"3:54"
   },
 ];
 
@@ -45,7 +51,7 @@ songitem.forEach((Element, i) => {
   // console.log(Element,i)
   Element.getElementsByTagName("img")[0].src = songs[i].coverpath;
   Element.getElementsByClassName("songname")[0].innerHTML = songs[i].songname;
-  //  Element.getElementsByClassName("timestamp")[0].innerHTML=
+  Element.getElementsByClassName('timestamp')[0].textContent=songs[i].duration;
 });
 
 // handle play pause clicks
