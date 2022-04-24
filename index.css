@@ -93,6 +93,8 @@ nav ul li {
 
 #progressBar {
     width: 77.8vw;
+    cursor: pointer;
+    /* transition: 2s ease-in; */
 }
 
 .songsItem {
