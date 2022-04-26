@@ -27,17 +27,16 @@
 >   * [Resources (Documentation and other links)](#resources-documentation-and-other-links)
 >   * [Contributing / Reporting issues](#contributing--reporting-issues)
 >   * [License](#license)
->   * [About Nuxeo](#about-nuxeo)
+
 
 ## Installation
 
-Sample:
+* Clone the repos - https://github.com/bibinthomas123/Spotify.git 
 
-* From the Nuxeo Marketplace: install [the Sample Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample).
-* From the command line: `nuxeoctl mp-install nuxeo-sample`
 
 ## Usage
-
+ 
+* To begin Run the index.html file and make sure all the required file path is mentioned in the program is relative to your local computer 
 ### Screenshots
 
 ### Features
