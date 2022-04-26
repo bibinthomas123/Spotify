@@ -1,4 +1,4 @@
-// console.log("its working")
+console.log("its working , Welcome ")
 
 //initialize the variable
 let songIndex = 0;
@@ -7,6 +7,8 @@ let myprogressbar = document.getElementById("progressBar");
 let audioElement = new Audio("1.mp3");
 let mastersongname = document.getElementById("mastersongname");
 let songitem = Array.from(document.getElementsByClassName("songsItem"));
+
+//songs object with songName filepath coverpath and duration 
 //music is added here
 let songs = [
   {
@@ -47,6 +49,7 @@ let songs = [
   },
 ];
 
+//adding cover path and song name and duration for each song in the Obj songs 
 songitem.forEach((Element, i) => {
   // console.log(Element,i)
   Element.getElementsByTagName("img")[0].src = songs[i].coverpath;
@@ -54,7 +57,8 @@ songitem.forEach((Element, i) => {
   Element.getElementsByClassName('timestamp')[0].textContent=songs[i].duration;
 });
 
-// handle play pause clicks
+
+// handle play pause clicks in the progess bar 
 masterplayer.addEventListener("click", () => {
   if (audioElement.paused || audioElement.currentTime <= 0) {
     audioElement.play();
@@ -66,8 +70,9 @@ masterplayer.addEventListener("click", () => {
     masterplayer.classList.add("fa-play-circle");
   }
 });
-//listen to events
 
+
+//listen to events
 audioElement.addEventListener("timeupdate", () => {
   //   console.log("time update");
   //seek bar update
@@ -80,6 +85,7 @@ myprogressbar.addEventListener("change", () => {
     (myprogressbar.value * audioElement.duration) / 100;
 });
 
+//for all songs adding play/pause btn 
 const makeAllplays = () => {
   Array.from(document.getElementsByClassName("songitemplay")).forEach(
     (Element) => {
@@ -88,6 +94,7 @@ const makeAllplays = () => {
     }
   );
 };
+
 
 Array.from(document.getElementsByClassName("songitemplay")).forEach(
   (Element) => {
@@ -108,7 +115,7 @@ Array.from(document.getElementsByClassName("songitemplay")).forEach(
 );
 
 document.getElementById("next").addEventListener("click", () => {
-  if (songIndex > 5) {
+  if (songIndex > 5) {  //changing songs as we click on the next btn 
     songIndex = 1;
   } else {
     songIndex += 1;
@@ -122,12 +129,12 @@ document.getElementById("next").addEventListener("click", () => {
 });
 
 document.getElementById("previous").addEventListener("click", () => {
-  if (songIndex < 0) {
+  if (songIndex < 0) {  //changing songs as we click on the previous btn 
     songIndex = 6;
   } else {
     songIndex -= 1;
   }
-  audioElement.src = `${songIndex}.mp3`;
+  audioElement.src = `${songIndex}.mp3`; //adding index value to the string 
   mastersongname.innerHTML = songs[songIndex-1].songname;
   audioElement.currentTime = 0;
   audioElement.play();
