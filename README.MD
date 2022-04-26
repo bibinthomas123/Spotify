@@ -16,14 +16,11 @@
 >   - [Usage](#usage)
 >     - [Screenshots](#screenshots)
 >     - [Features](#features)
->   - [Code](#code)
 >     - [Content](#content)
 >     - [Requirements](#requirements)
 >     - [Limitations](#limitations)
->     - [Build](#build)
->     - [Deploy (how to install build product)](#deploy-how-to-install-build-product)
->   - [Resources (Documentation and other links)](#resources-documentation-and-other-links)
 >   - [Contributing / Reporting issues](#contributing--reporting-issues)
+>   - [About me ](#About-me )
 >   - [License](#license)
 
 ## Installation
@@ -71,14 +68,11 @@ Link to JIRA component (or project if there is no component for that project). S
 
 ## License
 
-[Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+   [open source]()
 
-## About ME 
+## About-ME 
 
 I'm a student trying to learn new things by experiments ,i provide all my codes as an open source Content  written in HTML ,css, js . 
-
-
-
 The source code, documentation, roadmap, issue tracker, testing, benchmarks are all public.
 
 
