@@ -38,7 +38,7 @@
  
 * To begin Run the index.html file and make sure all the required file path is mentioned in the program is relative to your local computer 
 ### Screenshots
-
+<img src="screenshot.png">
 ### Features
 
 ## Code
