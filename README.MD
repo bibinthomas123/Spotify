@@ -61,10 +61,7 @@ Requirements : `*` A updated Browser is all it needs
 
 ## Contributing / Reporting issues
 
-Link to JIRA component (or project if there is no component for that project). Samples:
-
-- [Link to component](https://jira.nuxeo.com/issues/?jql=project%20%3D%20NXP%20AND%20component%20%3D%20Elasticsearch%20AND%20Status%20!%3D%20%22Resolved%22%20ORDER%20BY%20updated%20DESC%2C%20priority%20DESC%2C%20created%20ASC)
-- [Link to project](https://jira.nuxeo.com/secure/CreateIssue!default.jspa?project=NXP)
+ > if there is any issues or contributions to be made please create a PR 
 
 ## License
 
