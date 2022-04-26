@@ -61,7 +61,7 @@ Requirements : `*` A updated Browser is all it needs
 
 ## Contributing / Reporting issues
 
- > if there is any issues or contributions to be made please create a PR 
+if there is any issues or contributions to be made please create a PR 
 
 ## License
 
