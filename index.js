@@ -4,7 +4,7 @@ console.log("its working , Welcome ")
 let songIndex = 0;
 let masterplayer = document.getElementById("masterplay");
 let myprogressbar = document.getElementById("progressBar");
-let audioElement = new Audio("1.mp3");
+let audioElements = new Audio("1.mp3");
 let mastersongname = document.getElementById("mastersongname");
 let songitem = Array.from(document.getElementsByClassName("songsItem"));
 
